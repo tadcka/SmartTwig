@@ -1,5 +1,7 @@
 # SmartTwig
 
+[![Build Status](https://travis-ci.org/tadcka/SmartTwig.svg?branch=master)](https://travis-ci.org/tadcka/SmartTwig)
+
 ## Installation
 
 Install via [Composer](https://getcomposer.org/)
