@@ -1,0 +1,36 @@
+{
+    "name":         "tadcka/smart-twig",
+    "homepage":     "https://github.com/tadcka/SmartTwig",
+    "description":  "Tadcka smart twig library",
+    "keywords":     ["twig", "smart twig", "frontend tools"],
+    "type":         "library",
+    "license":      "MIT",
+    "authors": [
+        {
+            "name":   "Tadas Gliaubicas",
+            "email":  "tadcka89@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "twig/twig": "~1.23|~2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tadcka\\SmartTwig\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tadcka\\SmartTwig\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
