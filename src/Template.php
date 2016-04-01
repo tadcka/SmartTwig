@@ -48,28 +48,28 @@ abstract class Template extends TwigTemplate
     /**
      * Wraps content into additional HTML comment tags with template name information.
      *
-     * @param string $originalContent
+     * @param string $content
      * @param bool $forced
      *
      * @return string
      */
-    protected function wrapContent($originalContent, $forced = false)
+    protected function wrapContent($content, $forced = false)
     {
         if (false === $this->canWrapContent($forced)) {
-            return $originalContent;
+            return $content;
         }
 
-        $content = '<!-- Start Template: ' . $this->getTemplateName();
+        $wrapContent = '<!-- Start Template: ' . $this->getTemplateName();
 
         if ($this->parent) {
-            $content .= ' (Parent Template: ' . $this->parent->getTemplateName(). ')';
+            $wrapContent .= ' (Parent Template: ' . $this->parent->getTemplateName(). ')';
         }
 
-        $content .= " -->\n";
-        $content .= $originalContent;
-        $content .= '<!-- End Template: ' . $this->getTemplateName() . ' -->';
+        $wrapContent .= " -->\n";
+        $wrapContent .= $content;
+        $wrapContent .= '<!-- End Template: ' . $this->getTemplateName() . ' -->';
 
-        return $content;
+        return $wrapContent;
     }
 
     /**
