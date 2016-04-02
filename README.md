@@ -13,9 +13,7 @@ composer require tadcka/smart-twig "dev-master"
 ## Templates Hinting
 
 SmartTwig allows to enable templates hinting and in such a way helps to frontend developer to find proper template.
-This option can be enabled in application configuration with redefining base template class for twig:
-
-How use with Symfony?
+This option can be enabled in application configuration with redefining base template class for twig (example for Symfony application):
 
 ```yaml
 twig:
